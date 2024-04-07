@@ -1,3 +1,6 @@
+import geometry.Point;
+import geometry.Circle;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -10,6 +13,13 @@ public class Main {
 		
 		System.out.println("Współrzędne pliku to:\nx = " + wspX + "\ny = " + wspY);
 
+		
+		Circle kolo = new Circle(punkt1);
+		System.out.println("Promien kola to " + kolo.getRadius() + "\nPole koła to " + kolo.getArea());
+		System.out.println("Obwod kola to " + kolo.calculatePerimeter());
+		double[] tab = kolo.getCenter();
+		System.out.println("Srodek kola znajduje sie w punkcie x = " + tab[0] + " || y = " + tab[1]);
 	}
 
 }
+
